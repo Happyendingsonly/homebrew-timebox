@@ -1,8 +1,8 @@
 class TimeboxSkills < Formula
   desc "TimeBox skill pack for Claude Code (/timebox /update /braindump /tasksworkspace)"
   homepage "https://github.com/Happyendingsonly/timebox-skills"
-  url "https://github.com/Happyendingsonly/timebox-skills/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "ab5e6b96159a2a3978206b06eeb5513e403ca70de10759c156a42106abe51ef7"
+  url "https://github.com/Happyendingsonly/timebox-skills/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "75277608767ae084ca25926f4ccbc35c919893a63d2025b03dfcb388cb0b968c"
   license "MIT"
 
   def install
