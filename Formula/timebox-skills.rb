@@ -1,18 +1,18 @@
 class TimeboxSkills < Formula
-  desc "TimeBox skill pack for Claude Code (/timebox /update /braindump /tasksworkspace)"
+  desc "TimeBox skill pack for Claude Code (/timebox /update /braindump /tasksworkspace /handover)"
   homepage "https://github.com/Happyendingsonly/timebox-skills"
-  url "https://github.com/Happyendingsonly/timebox-skills/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "6bfc2677a551b48c11435057a60f1e141a2b82d3ef5b011848164cf0ac5f1e61"
+  url "https://github.com/Happyendingsonly/timebox-skills/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "b985855ee071b6bafd97184beb5a0170e2d67749921c6a97b1082287fcfad9c5"
   license "MIT"
 
   def install
-    pkgshare.install "timebox", "update", "braindump", "tasksworkspace", "README.md"
+    pkgshare.install "timebox", "update", "braindump", "tasksworkspace", "handover", "README.md"
 
     (bin/"timebox-skills-install").write <<~EOS
       #!/bin/bash
       set -e
       mkdir -p "$HOME/.claude/skills"
-      for s in timebox update braindump tasksworkspace; do
+      for s in timebox update braindump tasksworkspace handover; do
         ln -sfn "#{opt_pkgshare}/$s" "$HOME/.claude/skills/$s"
       done
       echo "TimeBox skills linked into ~/.claude/skills."
